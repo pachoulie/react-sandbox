@@ -2,7 +2,9 @@ import { expect } from 'chai';
 import { List, Map } from 'immutable';
 
 describe('immutability', () => {
+
   describe('a number', () => {
+
     function increment(currentState) {
       return currentState + 1;
     }
@@ -15,9 +17,11 @@ describe('immutability', () => {
       expect(nextState).to.equal(43);
       expect(state).to.equal(42);
     })
+
   });
 
   describe('a list', () => {
+
     function addMovie(currentState, movie) {
       return currentState.push(movie);
     }
@@ -33,9 +37,11 @@ describe('immutability', () => {
         'Trainspotting', '28 Days Later'
       ));
     })
+
   });
 
   describe('a tree', () => {
+
     function addMovie(currentState, movie) {
       return currentState.update('movies', movies => movies.push(movie));
     }
@@ -54,5 +60,6 @@ describe('immutability', () => {
         movies: List.of('Trainspotting', '28 Days Later')
       }));
     });
+
   });
 });

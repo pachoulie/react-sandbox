@@ -30,6 +30,7 @@ describe('application logic', () => {
   });
 
   describe('next', () => {
+
     it('takes the next two entries under vote', () => {
       const state = Map({
         entries: List.of('Trainspotting', '28 Days Later', 'Sunshine')
@@ -103,9 +104,11 @@ describe('application logic', () => {
         winner: 'Trainspotting'
       }));
     });
+
   });
 
   describe('vote', () => {
+
     it('creates a tally for the voted entry', () => {
       const state = Map({
         pairs: List.of('Trainspotting', '28 Days Later')
@@ -137,5 +140,6 @@ describe('application logic', () => {
         })
       }));
     });
+
   });
 });
